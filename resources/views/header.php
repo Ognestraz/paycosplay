@@ -10,9 +10,10 @@
         if ($metaRobotsContent) { echo '<meta name="robots" content="'.$metaRobotsContent.'">'; }
     ?>
 
-    <title></title>
+    <title><?=$site->title()?></title>
+    <link rel='stylesheet' href='<?=elixir("css/all.css");?>' type='text/css' media='all' />
     <link rel="shortcut icon" href='<?=url('/')?>/favicon.ico' type="image/x-icon">
-    <script type='text/javascript'> var csrf_token = '<?php echo csrf_token(); ?>';</script>
+    <script type='text/javascript'> var csrf_token = '<?=csrf_token()?>';</script>
 </head>
 
 <body>

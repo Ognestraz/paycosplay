@@ -5,6 +5,8 @@ namespace App\Exceptions;
 use Exception;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 use Laravel\Lumen\Exceptions\Handler as ExceptionHandler;
+use Illuminate\Database\Eloquent\ModelNotFoundException as ModelNotFoundException;
+use Illuminate\Http\Response;
 
 class Handler extends ExceptionHandler
 {
@@ -39,6 +41,10 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $e)
     {
+        if ($e instanceof ModelNotFoundException) {
+            return new Response(view('errors.404'), 404);
+        }
+
         return parent::render($request, $e);
     }
 }

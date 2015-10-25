@@ -1786,12 +1786,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Ognestraz/lumen-admin.git",
-                "reference": "7c6032c215a2106570c5565e49a3805588866384"
+                "reference": "4cd750ed714b680c3e2fc492c6caba67abbff48d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Ognestraz/lumen-admin/zipball/7c6032c215a2106570c5565e49a3805588866384",
-                "reference": "7c6032c215a2106570c5565e49a3805588866384",
+                "url": "https://api.github.com/repos/Ognestraz/lumen-admin/zipball/4cd750ed714b680c3e2fc492c6caba67abbff48d",
+                "reference": "4cd750ed714b680c3e2fc492c6caba67abbff48d",
                 "shasum": ""
             },
             "require": {
@@ -1831,7 +1831,7 @@
                 "laravel",
                 "lumen"
             ],
-            "time": "2015-10-24 16:57:29"
+            "time": "2015-10-25 05:45:39"
         },
         {
             "name": "psr/http-message",

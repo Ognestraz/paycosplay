@@ -11,10 +11,6 @@
 |
 */
 
-$app->get('/', function () use ($app) {
-    return $app->welcome();
-});
-
 $app->group(['namespace' => 'App\Http\Controllers'], function () use ($app) {
     
     $app->get('{path:[a-zA-Z0-9_\-\/]*}', array('uses' => 'SiteController@show'));
