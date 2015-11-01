@@ -10,5 +10,6 @@
     </div>
     <!-- /.container -->
     <script src='<?=elixir("js/all.js");?>'></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
 </body>
 </html>

@@ -12,6 +12,7 @@
 
     <title><?=$site->title()?></title>
     <link rel='stylesheet' href='<?=elixir("css/all.css");?>' type='text/css' media='all' />
+    <link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
     <link rel="shortcut icon" href='<?=url('/')?>/favicon.ico' type="image/x-icon">
     <script type='text/javascript'> var csrf_token = '<?=csrf_token()?>';</script>
 </head>
@@ -33,7 +34,7 @@
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <?=view('menu.show', array('menu' => (new Model\Menu())->getTree(1, true)))?>
+                <?=view('menu.show', array('menu' => (new Model\Menu())->getTree(8, true)))?>
             </div>
             <!-- /.navbar-collapse -->
         </div>

@@ -42,6 +42,19 @@ return [
     */
 
     'fallback_locale' => env('APP_FALLBACK_LOCALE', 'en'),
-    'admin_url' => 'admin'
+    'admin_url' => 'admin',
+    'image' => [
+        'variants' => [
+            'preview' => [
+                ['fit' => ['width' => 320, 'height' => 180]]
+            ],
+            'large' => [
+                ['fit' => ['width' => 1280, 'height' => 960]]
+            ],
+            'slider' => [
+                ['fit-upsize' => ['width' => 640, 'height' => 360, 'k' => 0.2]]
+            ]         
+        ]
+    ]
 
 ];

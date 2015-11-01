@@ -2,8 +2,7 @@
 
 use Response;
 use Input;
-use Model\Site;
-//use Ognestraz\Admin\Models as Models;
+use App\Models\Site;
 
 class SiteController extends Controller {
 
@@ -14,14 +13,11 @@ class SiteController extends Controller {
 
     public function tree()
     {
-
         return $this->model()->createTree();
-
     }
 
     public function update($id)
     {
-
         $result = parent::update($id);
 
         if (!Input::get('_action')) {
@@ -33,12 +29,10 @@ class SiteController extends Controller {
         }
 
         return $result;
-
     }       
 
     public function move($id)
     {
-
         $model = $this->model($id);
         $model->move($id, Input::get('parent'), Input::get('position'));
 
@@ -47,17 +41,12 @@ class SiteController extends Controller {
         $this->result['result'] = true;             
 
         return Response::json($this->result);
-
     }         
 
     public function show($path)
     {
         $site = Site::findPath($path, true, true);
         Site::$site = $site;
-        
-//        if (!$site->id) {
-//            return response()->view('errors.404', [], 404);
-//        }
         
         return view($site->view(), array('site' => $site));
     }

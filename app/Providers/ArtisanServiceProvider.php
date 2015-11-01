@@ -2,6 +2,7 @@
 
 use Illuminate\Support\ServiceProvider;
 use App\Console\Commands\VendorPublishCommand;
+use App\Console\Commands\ImageClearCommand;
 
 class ArtisanServiceProvider extends ServiceProvider
 {
@@ -18,7 +19,8 @@ class ArtisanServiceProvider extends ServiceProvider
      * @var array
      */
     protected $commands = [
-        'VendorPublish' => 'command.vendor.publish'
+        'VendorPublish' => 'command.vendor.publish',
+        'ImageClear' => 'command.image.clear'
     ];
 
     /**
@@ -48,6 +50,18 @@ class ArtisanServiceProvider extends ServiceProvider
             return new VendorPublishCommand($app['files']);
         });
     }
+    
+    /**
+     * Register the command.
+     *
+     * @return void
+     */
+    protected function registerImageClearCommand()
+    {
+        $this->app->singleton('command.image.clear', function ($app) {
+            return new ImageClearCommand($app['files']);
+        });
+    }    
 
     /**
      * Get the services provided by the provider.

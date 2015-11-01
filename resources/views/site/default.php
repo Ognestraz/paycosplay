@@ -1,6 +1,5 @@
 <?=view('header', array('site' => $site))?>
 
-
         <!-- Marketing Icons Section -->
         <div class="row">
             <div class="col-lg-12">
@@ -14,6 +13,6 @@
         </div>
         <!-- /.row -->
 
-        <hr>
+        <hr />
         
 <?=view('footer')?>

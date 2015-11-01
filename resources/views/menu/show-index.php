@@ -1,13 +1,17 @@
 <div class="row">
-    <?php foreach ($menu as $item) { ?>
+    <?php foreach ($menu as $item) { 
+        $imageSrc = $item['model']->site->image() ? $item['model']->site->image()->src('preview') : '';
+    ?>
 
         <div class="col-md-4 text-center">
-            <div class="thumbnail">
+            <div class="boxgrid boxgrid-preview caption center-block">
                 <a href="<?=$item['model']->link()?>">
-                    <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+                    <img src="<?=$imageSrc?>" alt="" />
                 </a>
-                <div class="caption">
-                    <h3><a href="<?=$item['model']->link()?>"><?=$item['model']->name?></a></h3>
+                <div class="cover boxcaption">
+                    <h3>
+                        <a href="<?=$item['model']->link()?>"><?=$item['model']->name?></a>
+                    </h3>
                     <p><?=$item['model']->preview?></p>
                 </div>
             </div>

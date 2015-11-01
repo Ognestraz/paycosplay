@@ -11,6 +11,10 @@
 |
 */
 
+$app->group(['namespace' => 'Admin\Http\Controllers'], function () use ($app) {
+    $app->get('image/{variant}/{path:[a-zA-Z0-9_\-\/\.]*}', array('uses' => 'ImageController@image'));
+});
+
 $app->group(['namespace' => 'App\Http\Controllers'], function () use ($app) {
     
     $app->get('{path:[a-zA-Z0-9_\-\/]*}', array('uses' => 'SiteController@show'));

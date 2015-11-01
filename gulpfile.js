@@ -5,7 +5,8 @@ elixir(function(mix) {
         "jquery.js",
         "bootstrap.min.js",
         "contact_me.js",
-        "jqBootstrapValidation.js"
+        "jqBootstrapValidation.js",
+        "boxgrid.js"
     ], 'public/js/all.js');    
 });
 
@@ -13,13 +14,14 @@ elixir(function(mix) {
     mix.styles([
         "bootstrap.min.css",
         "modern-business.css",
-        "font-awesome.min.css"
+        "font-awesome.min.css",
+        "boxgrid.css"
     ], 'public/css/all.css');
 });
 
 elixir(function(mix) {
-//    mix.copy("resources/assets/sb-admin-2/bower_components/font-awesome/fonts", "public/build/fonts")
-//        .copy("resources/assets/fonts", "public/build/fonts")
+    mix.copy("resources/assets/fonts", "public/build/fonts");
+//        .copy("resources/assets/sb-admin-2/bower_components/font-awesome/fonts", "public/build/fonts")
 //        .copy("resources/assets/sb-admin-2/bower_components/jquery-prettyPhoto/images/prettyPhoto/default", "public/build/images/prettyPhoto/default");
 });
 
