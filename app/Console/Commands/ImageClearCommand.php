@@ -1,12 +1,7 @@
 <?php namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
-use League\Flysystem\MountManager;
 use Illuminate\Filesystem\Filesystem;
-use Illuminate\Support\ServiceProvider;
-use League\Flysystem\Filesystem as Flysystem;
-use League\Flysystem\Adapter\Local as LocalAdapter;
-use Illuminate\Support\Facades\Storage;
 
 class ImageClearCommand extends Command
 {
