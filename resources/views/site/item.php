@@ -22,7 +22,7 @@
                     data-width="100%"
                     data-maxheight="360">
                     <?php foreach ($albumImages as $k => $image) { ?>
-                        <a href="<?=$image->srcNoCache('slider')?>" data-full="<?=$image->src('large')?>">
+                        <a href="<?=$image->src('slider')?>" data-full="<?=$image->src('large')?>">
                             <img src="<?=$image->src('icon')?>">
                         </a>
                     <?php } ?>                    
