@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <meta name="keywords" content="<?=$site->keywords?>">
-    <meta name="description" content="<?=$site->description?>">
+    <meta name="keywords" content="<?=$site->getKeywords()?>">
+    <meta name="description" content="<?=$site->getDescription()?>">
     <title><?=$site->title()?></title>
     <meta name='yandex-verification' content='7ce573f8ee5814af' />
     <link rel='stylesheet' href='<?=elixir("css/all.css");?>' type='text/css' media='all' />
