@@ -11,6 +11,7 @@
     ?>
 
     <title><?=$site->title()?></title>
+    <meta name='yandex-verification' content='7ce573f8ee5814af' />
     <link rel='stylesheet' href='<?=elixir("css/all.css");?>' type='text/css' media='all' />
     <link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
     <link rel="shortcut icon" href='<?=url('/')?>/favicon.ico' type="image/x-icon">
