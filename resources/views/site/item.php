@@ -23,9 +23,9 @@
                     data-maxheight="360">
                     <?php foreach ($albumImages as $k => $image) { ?>
                         <a href="<?=$image->src('slider')?>" data-full="<?=$image->src('large')?>">
-                            <img src="<?=$image->src('icon')?>">
+                            <img src="<?=$image->src('icon')?>" alt="<?=$site->name?>">
                         </a>
-                    <?php } ?>                    
+                    <?php } ?>
                 </div>
             </div>
 

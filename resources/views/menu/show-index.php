@@ -6,7 +6,7 @@
         <div class="col-md-4 col-sm-6 col-xs-12 text-center">
             <div class="boxgrid boxgrid-preview caption center-block">
                 <a href="<?=$item['model']->link()?>">
-                    <img src="<?=$imageSrc?>" alt="" />
+                    <img src="<?=$imageSrc?>" alt="<?=$item['model']->name?>" />
                 </a>
                 <div class="cover boxcaption">
                     <h3>
