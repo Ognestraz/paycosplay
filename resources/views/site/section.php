@@ -12,7 +12,7 @@
 
     <div class="row">
         <div class="col-lg-12">
-            <?php foreach ($site->childs()->sort()->get() as $k => $child) {
+            <?php foreach ($site->childs()->act()->sort()->get() as $k => $child) {
                 $imageSrc = $child->image() ? $child->image()->src('preview') : '';
             ?>
                 <div class="col-md-4 col-sm-6 col-xs-6 border">

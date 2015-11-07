@@ -41,7 +41,7 @@
             <div class="col-lg-12">
                 <h3 class="page-header">Другие мастерские</h3>
             </div>
-            <?php foreach ($site->brothers()->get() as $child) {
+            <?php foreach ($site->brothers()->act()->get() as $child) {
                 $imageSrc = $child->image() ? $child->image()->src('preview') : '';
             ?>
                 <div class="col-md-3 col-sm-6 col-xs-6 text-center">

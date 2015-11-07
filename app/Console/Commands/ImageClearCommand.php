@@ -46,7 +46,7 @@ class ImageClearCommand extends Command
             if ($file->isFile()) {
                 unlink($file->getPathname());
             }
-        }        
+        }
     }
     
     /**
@@ -58,7 +58,7 @@ class ImageClearCommand extends Command
     {
         $variant = $this->argument('variant');
         $folder = base_path() . '/public/image/';
-        
+
         if (null === $variant) {
             $dir = new \DirectoryIterator($folder);
             foreach ($dir as $file) {
@@ -67,7 +67,7 @@ class ImageClearCommand extends Command
                 }
             }
         } else {
-            $this->deleteFiles($folder . $variant);            
+            $this->deleteFiles($folder . $variant);
         }
     }
 }

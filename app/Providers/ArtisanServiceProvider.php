@@ -1,8 +1,10 @@
 <?php namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use App\Console\Commands\VendorPublishCommand;
+use App\Console\Commands\DBImportCommand;
 use App\Console\Commands\ImageClearCommand;
+use App\Console\Commands\ImageImportCommand;
+use App\Console\Commands\VendorPublishCommand;
 
 class ArtisanServiceProvider extends ServiceProvider
 {
@@ -20,7 +22,9 @@ class ArtisanServiceProvider extends ServiceProvider
      */
     protected $commands = [
         'VendorPublish' => 'command.vendor.publish',
-        'ImageClear' => 'command.image.clear'
+        'ImageClear' => 'command.image.clear',
+        'ImageImport' => 'command.image.import',
+        'DBImport' => 'command.db.import'
     ];
 
     /**
@@ -61,8 +65,32 @@ class ArtisanServiceProvider extends ServiceProvider
         $this->app->singleton('command.image.clear', function ($app) {
             return new ImageClearCommand($app['files']);
         });
-    }    
+    }
+    
+    /**
+     * Register the command.
+     *
+     * @return void
+     */
+    protected function registerImageImportCommand()
+    {
+        $this->app->singleton('command.image.import', function ($app) {
+            return new ImageImportCommand($app['files']);
+        });
+    }
 
+    /**
+     * Register the command.
+     *
+     * @return void
+     */
+    protected function registerDBImportCommand()
+    {
+        $this->app->singleton('command.db.import', function ($app) {
+            return new DBImportCommand($app['files']);
+        });
+    }
+    
     /**
      * Get the services provided by the provider.
      *

@@ -49,11 +49,18 @@ return [
                 ['fit' => ['width' => 320, 'height' => 180]]
             ],
             'large' => [
-                ['fit' => ['width' => 1280, 'height' => 960]]
+                ['resize' => ['width' => 1280, 'height' => 960]]
             ],
             'slider' => [
                 ['fit-upsize' => ['width' => 640, 'height' => 360, 'k' => 0.2]]
             ]         
+        ]
+    ],
+    'remote' => [
+        'db' => [
+            'database' => env('REMOTE_DB_DATABASE', ''),
+            'username' => env('REMOTE_DB_USERNAME', ''),
+            'password' => env('REMOTE_DB_PASSWORD', '')
         ]
     ]
 

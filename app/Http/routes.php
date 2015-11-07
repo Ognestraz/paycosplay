@@ -16,7 +16,7 @@ $app->group(['namespace' => 'Admin\Http\Controllers'], function () use ($app) {
 });
 
 $app->group(['namespace' => 'App\Http\Controllers'], function () use ($app) {
-    
+
     $app->get('{path:[a-zA-Z0-9_\-\/]*}', array('uses' => 'SiteController@show'));
 
 });

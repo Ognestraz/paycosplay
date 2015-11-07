@@ -3,7 +3,7 @@
         $imageSrc = $item['model']->site->image() ? $item['model']->site->image()->src('preview') : '';
     ?>
 
-        <div class="col-md-4 text-center">
+        <div class="col-md-4 col-sm-6 col-xs-12 text-center">
             <div class="boxgrid boxgrid-preview caption center-block">
                 <a href="<?=$item['model']->link()?>">
                     <img src="<?=$imageSrc?>" alt="" />
