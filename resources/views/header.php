@@ -5,11 +5,6 @@
     <meta name="viewport" content="width=device-width">
     <meta name="keywords" content="<?=$site->keywords?>">
     <meta name="description" content="<?=$site->description?>">
-    <?php
-        $metaRobotsContent = $site->metaRobotsContent(); 
-        if ($metaRobotsContent) { echo '<meta name="robots" content="'.$metaRobotsContent.'">'; }
-    ?>
-
     <title><?=$site->title()?></title>
     <meta name='yandex-verification' content='7ce573f8ee5814af' />
     <link rel='stylesheet' href='<?=elixir("css/all.css");?>' type='text/css' media='all' />
