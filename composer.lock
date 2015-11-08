@@ -1787,12 +1787,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Ognestraz/lumen-admin.git",
-                "reference": "e8053f4f89aed9cc5aad437e18cb36b546763d95"
+                "reference": "8f94b32aba8fc47c6baa0e255d8f6a441cfea519"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Ognestraz/lumen-admin/zipball/e8053f4f89aed9cc5aad437e18cb36b546763d95",
-                "reference": "e8053f4f89aed9cc5aad437e18cb36b546763d95",
+                "url": "https://api.github.com/repos/Ognestraz/lumen-admin/zipball/8f94b32aba8fc47c6baa0e255d8f6a441cfea519",
+                "reference": "8f94b32aba8fc47c6baa0e255d8f6a441cfea519",
                 "shasum": ""
             },
             "require": {
@@ -1832,7 +1832,7 @@
                 "laravel",
                 "lumen"
             ],
-            "time": "2015-11-08 19:48:34"
+            "time": "2015-11-08 20:33:29"
         },
         {
             "name": "paragonie/random_compat",
