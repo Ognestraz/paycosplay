@@ -52,7 +52,7 @@ return [
                 ['resize' => ['width' => 1280, 'height' => 960]]
             ],
             'slider' => [
-                ['fit-upsize' => ['width' => 640, 'height' => 360, 'k' => 0.2]]
+                ['fit-upsize' => ['width' => 640, 'height' => 360, 'k' => 0.45]]
             ]         
         ]
     ],
