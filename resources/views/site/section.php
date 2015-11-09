@@ -18,7 +18,7 @@
                 <div class="col-md-4 col-sm-6 col-xs-6 border">
                     <div class="boxgrid caption boxgrid-preview center-block">
                         <a href="<?=$child->link()?>">
-                            <img src="<?=$imageSrc?>" alt="<?=$child->name?>" />
+                            <img src="<?=subdomainImage($imageSrc)?>" alt="<?=$child->name?>" />
                         </a>
                         <div class="cover boxcaption">
                             <h3>

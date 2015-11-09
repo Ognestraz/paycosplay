@@ -11,8 +11,16 @@
 |
 */
 
+//$app->group(['namespace' => 'Admin\Http\Controllers'], function () use ($app) {
+//    $app->get('image/{variant}/{path:[a-zA-Z0-9_\-\/\.]*}', array('uses' => 'ImageController@image'));
+//});
+
 $app->group(['namespace' => 'Admin\Http\Controllers'], function () use ($app) {
-    $app->get('image/{variant}/{path:[a-zA-Z0-9_\-\/\.]*}', array('uses' => 'ImageController@image'));
+
+    if (isset($_SERVER['SERVER_NAME']) && 'image.' . $_SERVER['SERVER_NAME'] === $_SERVER['HTTP_HOST']) {
+        $app->get('{variant}/{path:[a-zA-Z0-9_\-\/\.]*}', array('uses' => 'ImageController@image'));
+    }
+    
 });
 
 $app->group(['namespace' => 'App\Http\Controllers'], function () use ($app) {

@@ -22,8 +22,8 @@
                     data-width="100%"
                     data-maxheight="360">
                     <?php foreach ($albumImages as $k => $image) { ?>
-                        <a href="<?=$image->src('slider')?>" data-full="<?=$image->src('large')?>">
-                            <img src="<?=$image->src('icon')?>" alt="<?=$site->name?>">
+                        <a href="<?=subdomainImage($image->src('slider'))?>" data-full="<?=subdomainImage($image->src('large'))?>">
+                            <img src="<?=subdomainImage($image->src('icon'))?>" alt="<?=$site->name?>">
                         </a>
                     <?php } ?>
                 </div>
@@ -46,7 +46,7 @@
             ?>
                 <div class="col-md-3 col-sm-6 col-xs-6 text-center">
                     <a href="<?=$child->link()?>">
-                        <img class="img-responsive img-hover center-block" src="<?=$imageSrc?>" alt="<?=$child->name?>">
+                        <img class="img-responsive img-hover center-block" src="<?=subdomainImage($imageSrc)?>" alt="<?=$child->name?>">
                         <h4><?=$child->name?></h4>
                     </a>
                 </div>
