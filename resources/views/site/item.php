@@ -47,7 +47,7 @@
                 <div class="col-md-3 col-sm-6 col-xs-6 text-center">
                     <a href="<?=$child->link()?>">
                         <img class="img-responsive img-hover center-block" src="<?=subdomainImage($imageSrc)?>" alt="<?=$child->name?>">
-                        <h4><?=$child->name?></h4>
+                        <h4 class="nowrap"><?=$child->name?></h4>
                     </a>
                 </div>
             <?php } ?>

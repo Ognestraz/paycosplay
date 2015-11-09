@@ -21,7 +21,7 @@
                             <img src="<?=subdomainImage($imageSrc)?>" alt="<?=$child->name?>" />
                         </a>
                         <div class="cover boxcaption">
-                            <h3>
+                            <h3 class="nowrap">
                                 <a href="<?=$child->link()?>"><?=$child->name?></a>
                             </h3>
                         </div>
