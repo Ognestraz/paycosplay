@@ -15,16 +15,20 @@
 //    $app->get('image/{variant}/{path:[a-zA-Z0-9_\-\/\.]*}', array('uses' => 'ImageController@image'));
 //});
 
-$app->group(['namespace' => 'Admin\Http\Controllers'], function () use ($app) {
+$imageDomain = isset($_SERVER['SERVER_NAME']) && 'image.' . $_SERVER['SERVER_NAME'] === $_SERVER['HTTP_HOST'];
 
-    if (isset($_SERVER['SERVER_NAME']) && 'image.' . $_SERVER['SERVER_NAME'] === $_SERVER['HTTP_HOST']) {
+$app->group(['namespace' => 'Admin\Http\Controllers'], function () use ($app, $imageDomain) {
+
+    if ($imageDomain) {
         $app->get('{variant}/{path:[a-zA-Z0-9_\-\/\.]*}', array('uses' => 'ImageController@image'));
     }
     
 });
 
-$app->group(['namespace' => 'App\Http\Controllers'], function () use ($app) {
+$app->group(['namespace' => 'App\Http\Controllers'], function () use ($app, $imageDomain) {
 
-    $app->get('{path:[a-zA-Z0-9_\-\/]*}', array('uses' => 'SiteController@show'));
+    if (!$imageDomain) {
+        $app->get('{path:[a-zA-Z0-9_\-\/]*}', array('uses' => 'SiteController@show'));
+    }
 
 });
