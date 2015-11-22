@@ -2,7 +2,7 @@
 
 <?php 
     $image = $site->image();
-    $albumImages = $site->images('album')->sort()->get();
+    $albumImages = $site->images('album')->act()->sort()->get();
 ?>
 
         <!-- Page Heading/Breadcrumbs -->
