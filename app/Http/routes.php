@@ -11,24 +11,10 @@
 |
 */
 
-//$app->group(['namespace' => 'Admin\Http\Controllers'], function () use ($app) {
-//    $app->get('image/{variant}/{path:[a-zA-Z0-9_\-\/\.]*}', array('uses' => 'ImageController@image'));
-//});
+if (isSubdomain('image')) {
+    return false;
+}
 
-$imageDomain = isset($_SERVER['SERVER_NAME']) && 'image.' . $_SERVER['SERVER_NAME'] === $_SERVER['HTTP_HOST'];
-
-$app->group(['namespace' => 'Admin\Http\Controllers'], function () use ($app, $imageDomain) {
-
-    if ($imageDomain) {
-        $app->get('{variant}/{path:[a-zA-Z0-9_\-\/\.]*}', array('uses' => 'ImageController@image'));
-    }
-    
-});
-
-$app->group(['namespace' => 'App\Http\Controllers'], function () use ($app, $imageDomain) {
-
-    if (!$imageDomain) {
-        $app->get('{path:[a-zA-Z0-9_\-\/]*}', array('uses' => 'SiteController@show'));
-    }
-
+$app->group(['namespace' => 'App\Http\Controllers'], function () use ($app) {
+    $app->get('{path:[a-zA-Z0-9_\-\/]*}', array('uses' => 'SiteController@show'));
 });
