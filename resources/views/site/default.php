@@ -7,7 +7,7 @@
                     <?=view('site.block.breadcrumbs', array('site' => $site))?>
                 </h2>
             </div>
-            <div class="col-lg-12">
+            <div class="col-lg-8">
                 <?=$site->content?>
             </div>
         </div>
